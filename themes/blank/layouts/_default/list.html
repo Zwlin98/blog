@@ -1,0 +1,14 @@
+{{define "main"}} {{if not .IsHome }}
+<h1>{{ .Title | markdownify }}</h1>
+{{ end }} {{ .Content }}
+
+<ol class="page-list" reversed>
+  {{ $pages := .Pages }} {{ if .IsHome }} {{ $pages = .Site.RegularPages}} {{
+  end }} {{ range (where $pages "Section" "!=" "") }}
+  <li>
+    <span class="date"> {{ .Date.Format "2006/01/02" }} </span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ol>
+{{end}}

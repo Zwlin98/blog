@@ -1,0 +1,40 @@
+body {
+  /* max-width: 800px; */
+  /* margin: auto; */
+  padding: 1em;
+  line-height: 1.5;
+  background: #f6f6f6;
+}
+a {
+  text-decoration: none;
+}
+/* header and footer areas */
+.menu {
+  padding: 0;
+}
+.menu li {
+  display: inline-block;
+}
+.article-meta,
+.menu a {
+  text-decoration: none;
+  padding: 5px;
+}
+.title {
+  font-size: 1.1em;
+}
+footer a {
+  text-decoration: none;
+}
+hr {
+  border-style: dashed;
+  color: #ddd;
+}
+
+.page-list {
+  list-style-type: decimal-leading-zero;
+}
+
+.page-list li {
+  padding: 5px;
+}

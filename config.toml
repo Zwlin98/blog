@@ -1,0 +1,42 @@
+baseURL = "https://blog.zwlin.io"
+title = "Zwlin's Blog"
+theme = "blank"
+disableKinds = ['taxonomy', 'term','section']
+[author]                  # essential                     # 必需
+  name = "Zwlin"
+
+[sitemap]                 # essential                     # 必需
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[[menu.main]]             # config your menu              # 配置目录
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Books"
+  weight = 20
+  identifier = "books"
+  url = "/books/"
+
+[[menu.main]]
+  name = "About"
+  weight = 50
+  identifier = "about"
+  url = "/about/"
+
+[[menu.main]]
+  name = "RSS"
+  weight = 60 
+  identifier = "rss"
+  url = "/index.xml"
+
+[markup]
+  [markup.highlight]
+    noClasses = false 
+    style = 'igor'
+    lineNos = true 
+    lineNumbersInTable = false
