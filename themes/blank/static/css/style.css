@@ -8,6 +8,12 @@ body {
 a {
   text-decoration: none;
 }
+
+th,
+td {
+  padding: 5px 10px;
+  border-bottom: 2px solid #ddd;
+}
 /* header and footer areas */
 .menu {
   padding: 0;
