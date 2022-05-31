@@ -3,7 +3,7 @@ title: "TCP Initial Sequence Number"
 date: 2021-03-30T19:46:39+08:00
 ---
 
-这几天在学习 `TCP/IP Illustrate Volume I` 的 Charpter 13，里面是的初始序列号的选择问题比较有意思，故单独记一篇。
+这几天在学习 `TCP/IP Illustrate Volume I` 的 Charpter 13，里面的初始序列号的选择问题比较有意思，故单独记一篇。
 
 ## Initial Sequence Number (ISN)
 
