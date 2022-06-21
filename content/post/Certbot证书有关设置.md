@@ -7,7 +7,9 @@ date: 2020-01-31 10:34:19
 <!--more-->
 1. 申请泛域名证书
 ```bash
-certbot certonly --preferred-challenges dns --manual  -d '*.zwlinc.com' --server https://acme-v02.api.letsencrypt.org/directory
+certbot certonly --preferred-challenges dns --manual  \
+-d "example.com" \
+--server https://acme-v02.api.letsencrypt.org/directory
 ```
 2. 根据提示添加DNS的TXT记录
 3. 生成证书
