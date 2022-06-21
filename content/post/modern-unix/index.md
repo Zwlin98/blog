@@ -17,7 +17,7 @@ starship 是一个通用的终端提示符（prompt）自定义工具，由 Rust
 
 ## [neovim](https://github.com/neovim/neovim)
 
-noevim 是更加现在的 vim，在之前的博客中也介绍了，这里就不多描述了。
+noevim 是更加现代的 vim，在之前的博客中也介绍了，这里就不多描述了。
 
 
 ## [bat](https://github.com/sharkdp/bat)
