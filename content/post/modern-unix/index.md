@@ -53,7 +53,7 @@ fd -e .mp3 --exec rm
 ```
 
 ## [fzf](https://github.com/junegunn/fzf)
-fzf 是我非常喜欢的命令行模糊查找工具，可以和很多工具配合，例如 fd，neovim ,rg, z.lua 中，都可以集成 fzf，可以说是一个非常强大的工具了。下面是我的一些 fzf 配置：
+fzf 是我非常喜欢的命令行模糊查找工具，可以和很多工具配合，例如 fd、neovim、rg、 z.lua 中，都可以集成 fzf，可以说是一个非常强大的工具了。下面是我的一些 fzf 配置：
 ```shell
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
