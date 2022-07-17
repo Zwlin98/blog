@@ -27,4 +27,4 @@ deploy:
     - npm install -g wrangler
     - wrangler --version
     - echo $TEST
-    - wrangler pages publish public --project-name=blog
+    - wrangler pages publish public --project-name=blog --branch=main
