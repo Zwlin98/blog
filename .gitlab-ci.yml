@@ -9,7 +9,7 @@ stages:          # List of stages for jobs, and their order of execution
 build:
   stage: build
   image: 
-    name: klakegg/hugo:debian
+    name: reg.411lab.xyz/docker/klakegg/hugo:debian
     entrypoint: [""]
   script:
     - hugo --minify
@@ -18,9 +18,8 @@ deploy:
   stage: deploy
   needs: [build]
   image:
-    name: node:16
+    name: reg.411lab.xyz/docker/library/node:16
   script:
     - npm install -g wrangler
     - wrangler --version
-    - echo $TEST
     - wrangler pages publish public --project-name=blog --branch=main
