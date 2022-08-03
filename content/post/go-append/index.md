@@ -5,7 +5,7 @@ date: 2022-08-02T22:39:17+08:00
 
 很多 Go 的文章都提到 append 扩容的具体实现，为了确认文章中提到的 1024 阈值，我翻了下 Go 1.18 的源码，发现实现切片扩容的 growslice 函数实际已经变化了，源代码的位置也有一定的改变，因此在此记录一下。实际上 Go 的源代码变化的非常快，函数的位置也经常改变，我这里记录的源码也只是Go 1.18 这个特定版本的实现和代码位置。
 
-同时在 [Go 1.18 Release Notes](https://tip.golang.org/doc/go1.18#Runtime) 中提到:
+同时在 [Go 1.18 Release Notes](https://tip.golang.org/doc/go1.18#runtime) 中提到:
 
 > The built-in function `append` now **uses a slightly different formula** when deciding how much to grow a slice when it must allocate a new underlying array. The new formula is less prone to sudden transitions in allocation behavior.
 
