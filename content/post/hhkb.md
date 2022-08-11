@@ -1,5 +1,5 @@
 ---
-title: "HHKB和键映射"
+title: "HHKB and Key bindings"
 date: 2022-05-27T09:48:34+08:00
 ---
 

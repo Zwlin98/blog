@@ -1,5 +1,5 @@
 ---
-title: "SICP Chapter 1 习题全解"
+title: "SICP 习题全解 (1)"
 date: 2021-07-31T14:22:21+08:00
 ---
 

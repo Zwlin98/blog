@@ -1,6 +1,6 @@
 ---
 
-title: Python变量及其赋值
+title: "[笔记] Python 变量及其赋值"
 date: 2019-12-31 11:57:09
 
 ---

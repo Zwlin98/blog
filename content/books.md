@@ -7,11 +7,9 @@ date: 2022-04-10T16:01:07+08:00
 
 ### 在读书单 
 
-+ Real World Haskell
++ Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems（DDIA）
 
 ### 计划书单 
-
-+ Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems（DDIA）
 
 + Advanced Programming in the UNIX Environment （APUE）
 
@@ -54,7 +52,7 @@ by Applying Best Practices
 
 + 浪潮之巅
 
-### 公开课(部分未看完)
+### 公开课
 + [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 + [CIS 194](https://www.seas.upenn.edu/~cis194/spring13/)
 + [MIT 6.824](http://nil.csail.mit.edu/6.824/2020/)

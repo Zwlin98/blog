@@ -1,6 +1,6 @@
 ---
 
-title: Python装饰器(一)
+title: "[笔记] Python Decorator (1)"
 date: 2020-01-03 20:40:53
 
 ---

@@ -1,6 +1,6 @@
 ---
 
-title: Python简单生成器与yield表达式
+title: "[笔记] Python Generator"
 date: 2020-01-05 18:23:39
 
 ---

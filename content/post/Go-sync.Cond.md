@@ -1,5 +1,5 @@
 ---
-title: Go-sync.Cond 笔记
+title: "[笔记] Go sync.Cond"
 date: 2020-10-22 09:10:45
 ---
 

@@ -1,6 +1,6 @@
 ---
 
-title: Python中lambda与map,filter,reduce函数
+title: "[笔记] Python 与函数式编程"
 date: 2019-05-27 20:31:53
 
 ---
