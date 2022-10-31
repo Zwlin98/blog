@@ -8,8 +8,10 @@ body {
   text-align: justify;
 }
 a {
+  color:#3b7e4d;
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
 }
