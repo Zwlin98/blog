@@ -21,7 +21,7 @@ date: 2023-03-04T14:44:29+08:00
 **缺点：**
 
 + 由于大部分云服务器不支持[嵌套虚拟化](https://www.linux-kvm.org/page/Nested_Guests)，所以 Cloud PVE 只能管理和运行基于 LXC 的虚拟化方案。
-+ PVE本身占用内存占用略高（1G左右），不适用于配置过低的云服务器
++ PVE本身占用内存占用略高（1G左右），不适用于配置过低的云服务器。
 
 本文之后的内容，将具体介绍一下该方案的一些实施细节。
 
@@ -44,7 +44,7 @@ date: 2023-03-04T14:44:29+08:00
 
 ### 网络拓扑
 
-![image-20230304205415522](image-20230304205415522.png)
+![网络拓扑](image-20230304205415522.png)
 
 如图为 Cloud PVE 的整体网络拓扑，为了实现环境的隔离和透明科学上网，使用 OpenWrt 作为其他容器的网关。其中：
 
@@ -58,7 +58,7 @@ date: 2023-03-04T14:44:29+08:00
 
 在 PVE 的网络设置中，分别创建 `vmbr0` 和 `vmbr1`, 并为其指定 CIDR，CIDR 由个人喜好决定。
 
-![image-20230304211750387](image-20230304211750387.png)
+![PVE网络配置](image-20230304211750387.png)
 
 如图，在我的演示配置中：
 
@@ -90,7 +90,7 @@ net.ipv4.ip_forward = 1
 
 执行 `sysctl -p` 使设置生效。
 
-```shell
+```bash
 sysctl -p
 ```
 
@@ -100,4 +100,71 @@ sysctl -p
 
 ## OpenWrt in LXC
 
-## Docker in LXC
+### 导入 OpenWrt 
+
+我使用的 GitHub 上他人构建的 [OpenWrt](https://doc.openwrt.cc/2-OpenWrt-Rpi/)，如果你能自己编译，应该也可以。选择 [rootfs](https://openwrt.cc/releases/targets/x86/64/immortalwrt-x86-64-generic-rootfs.tar.gz) 下载，并在 PVE 的命令行导入。
+
+```bash
+pct create 100 immortalwrt-x86-64-generic-rootfs.tar.gz \
+--arch amd64 \
+--hostname OpenWrt \
+--rootfs local:8 \
+--memory 512 \
+--cores 2 \
+--ostype unmanaged \
+--unprivileged 1
+```
+
+### 添加网卡
+
+在 OpenWrt 对应的 LXC 的网络配置中，添加如下配置。其中，`eth0` 对应 WAN，桥接到 `vmbr0`，`eth1` 对应 LAN，桥接到 `vmbr1`。 
+
+![配置OpenWrt的网络](image-20230304223311772.png)
+
+### 配置 LAN
+
+启动 OpenWrt，修改 `/etc/config/network` 中的 lan 配置，修改 `ipaddr` 以及 `netmask`，删去 `option type 'bridge'`。
+
+```txt
+config interface 'lan'
+        option ifname 'eth1'
+        option proto 'static'
+        option ipaddr '192.168.200.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+```
+
+重启 OpenWrt 使得网络配置生效（可能需要在 PVE 的 Web 界面停止容器并重新启动）。
+
+### 配置 WAN
+
+使用 SSH 的端口转发，可以访问 OpenWrt 的 Web 界面。
+
+```bash
+ssh -L 8080:192.168.200.1:80 root@cloud_pve_ip_address
+```
+
+访问 `localhost:8080`，打开 OpenWrt 的 Web 管理界面，默认用户名为 root，密码为 password。
+
+如图，添加 eth0 作为 wan 口，协议选择静态，CIDR 为 `192.168.100.2/24`, 网关设置为 `192.168.100.1`。
+
+![OpenWrt的WAN配置](image-20230304225530450.png)
+
+### 创建其他容器
+
+![创建LXC容器](image-20230305104654243.png)
+
+在创建其他 LXC 容器时，需要将容器的网卡桥接到 `vmbr1`，也就是 OpenWrt 的 LAN。在其他容器中测试网络联通行，可以成功 ping 通外界网络即配置成功。
+
+## Conclusion
+
+自此，Cloud PVE 方案已经基本完成，通过创建不同 LXC 容器对不同服务进行隔离，对服务器资源进行更细粒度的划分。同时服务本身在云上，可以更便捷的通过云服务商的内网访问资源。但是本文还有一些问题没有解决，我会在之后的博文给出我的解决方案。
+
++ 有些项目只提供了基于 Docker 的部署方案，如何在 LXC 中运行 Docker。
++ 外界应该如何访问部署在内部 LXC 容器的服务 （内网穿透问题）。
+
+## References
+
+[1] [[OpenWrt Wiki] OpenWrt in LXC containers](https://openwrt.org/docs/guide-user/virtualization/lxc)
+
+[2] [Installing OpenWRT In Proxmox LXC – Virtualize Everything](https://virtualizeeverything.com/2022/05/23/setting-openwrt-in-proxmox-lxc/)
