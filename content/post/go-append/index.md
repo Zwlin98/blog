@@ -7,7 +7,7 @@ date: 2022-08-02T22:39:17+08:00
 
 同时在 [Go 1.18 Release Notes](https://tip.golang.org/doc/go1.18#runtime) 中提到：
 
-> The built-in function `append` now **uses a slightly different formula** when deciding how much to grow a slice when it must allocate a new underlying array。The new formula is less prone to sudden transitions in allocation behavior。
+> The built-in function `append` now **uses a slightly different formula** when deciding how much to grow a slice when it must allocate a new underlying array. The new formula is less prone to sudden transitions in allocation behavior.
 
 以下只摘出核心代码：
 

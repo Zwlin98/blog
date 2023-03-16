@@ -1306,7 +1306,7 @@ Q(b)：
 
 ## Exercise 2.71
 
-For the most frequent symbol need just `1` bit，for the least frequent symbol need `n-1` bit。
+For the most frequent symbol need just `1` bit, for the least frequent symbol need `n-1` bit。
 
 ## Exercise 2.72
 

@@ -3,11 +3,11 @@ title: "TCP Reset Segments"
 date: 2021-04-04T16:45:25+08:00
 ---
 
-In general，a reset is sent by TCP whenever a segment arrives that does **not appear to be correct** for the **referenced connection**。the term *referenced connection* measn the connection specified by the 4-tuple in the TCP and IP headers of the reset。Resets ordinarily result in a fast teardown of a TCP connection。
+In general, a reset is sent by TCP whenever a segment arrives that does **not appear to be correct** for the **referenced connection**。the term *referenced connection* measn the connection specified by the 4-tuple in the TCP and IP headers of the reset. Resets ordinarily result in a fast teardown of a TCP connection.
 
 在 TCP 协议中，RST 用来关闭异常的连接。在 TCP 的设计中它是不可或缺的。
 
-For a reset segment to be accepted by a TCP，**the *ACK* bit field must be set and the *ACK Number* field must be within the valid window**。This helps to prevent a simple attack in which anyone able to generate a reset matching the appropriate connection (4-tuple) could disrupt a connection [RFC5961]。
+For a reset segment to be accepted by a TCP,**the *ACK* bit field must be set and the *ACK Number* field must be within the valid window**。This helps to prevent a simple attack in which anyone able to generate a reset matching the appropriate connection (4-tuple) could disrupt a connection [RFC5961]。
 
 收到的 RST 必须要设置了 ACK 而且 ACK 合法。
 
@@ -51,7 +51,7 @@ For a reset segment to be accepted by a TCP，**the *ACK* bit field must be set 
 
 ## Reference
 
-[TCP/IP Illustrated，Volume 1 The Protocol - Kevin R。Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
+[TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
 
 [tcp rst 产生的几种情况](https://zhuanlan.zhihu.com/p/30791159)
 

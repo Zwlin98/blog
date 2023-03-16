@@ -9,7 +9,7 @@ date: 2022-05-10T09:41:51+08:00
 
 ### 关于我
 
-我是 Zwlin，98年出生，目前计科研究生在读，研究偏向软件工程，主要关注**配置文件与云原生**。本科开始学习编程，打过三年 `ICPC`。
+我是 Zwlin，98 年出生，目前计科研究生在读，研究偏向软件工程，主要关注**配置文件与云原生**。本科开始学习编程，打过三年 `ICPC`。
 
 我热爱开源，喜欢探索各种新技术，捣鼓各种电子产品。
 
@@ -28,4 +28,4 @@ date: 2022-05-10T09:41:51+08:00
 - Email：[blog@zwlin.mozmail.com](mailto:blog@zwlin.mozmail.com)
 - GitHub： [@Zwlin98](https://github.com/Zwlin98)
 - Telegram： [@zwlin98](https://t.me/zwlin98)
-- Telegram Channel：[Zwlin's Channel](https://t.me/Zwlin_channel)
+- Telegram Channel:[Zwlin's Channel](https://t.me/Zwlin_channel)

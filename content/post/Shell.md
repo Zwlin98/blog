@@ -65,7 +65,7 @@ prog 2> &1 1>out
 #### Linux 设置环境变量的方法
 
 + 在 `/etc/profile` 文件中添加变量**对所有用户生效 (永久的)**
-   用 vim 在文件 `/etc/profile` 文件中增加变量，该变量将会对 Linux 下所有用户有效，并且是 “永久的”。
+   用 vim 在文件 `/etc/profile` 文件中增加变量，该变量将会对 Linux 下所有用户有效，并且是“永久的”。
    例如：编辑/etc/profile 文件，添加 CLASSPATH 变量
 
 ```shell
@@ -76,7 +76,7 @@ prog 2> &1 1>out
 ​ 注：修改文件后要想马上生效还要运行 `source /etc/profile` 不然只能在下次重进此用户时生效。
 
 + 在用户目录下的。bash_profile 文件中增加变量**对单一用户生效 (永久的)**
-   用 `vim ~/.bash_profile` 文件中增加变量，改变量仅会对当前用户有效，并且是 “永久的”。
+   用 `vim ~/.bash_profile` 文件中增加变量，改变量仅会对当前用户有效，并且是“永久的”。
 
 ```shell
 vim ~/.bash.profile

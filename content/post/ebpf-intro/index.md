@@ -7,9 +7,9 @@ date: 2022-08-19T13:28:27+08:00
 
 对于我来说，最让我感到豁然开朗的解释的是 Brendan Gregg 大师在其[博文](https://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)中提到的：
 
-> **eBPF** does to Linux what JavaScript does to HTML。(Sort of。) … In reality，eBPF is more like the v8 virtual machine that runs JavaScript，rather than JavaScript itself。eBPF is part of the Linux kernel。
+> **eBPF** does to Linux what JavaScript does to HTML.(Sort of.) … In reality, eBPF is more like the v8 virtual machine that runs JavaScript, rather than JavaScript itself. eBPF is part of the Linux kernel.
 
-实际上我看了很多对于 ebpf 的 “[正式](https://ebpf.io/what-is-ebpf#what-is-ebpf)” 释义依旧云里雾里，大师的解释让我对于 ebpf 一下子不再心怀畏惧：认为其需要高深的 Linux 内核知识，需要充分的内核知识储备。
+实际上我看了很多对于 ebpf 的“[正式](https://ebpf.io/what-is-ebpf#what-is-ebpf)”释义依旧云里雾里，大师的解释让我对于 ebpf 一下子不再心怀畏惧：认为其需要高深的 Linux 内核知识，需要充分的内核知识储备。
 
 之后我就开始了我的 ebpf 体验之旅，发现确实以我对于 Linux 内核粗浅的认识，一样可以使用 ebpf (当然也得益于 [bcc](https://github.com/iovisor/bcc) 这一好用的工具)，因此记录下我在了解和学习 ebpf / bcc 过程中踩的一些坑。
 
@@ -17,7 +17,7 @@ date: 2022-08-19T13:28:27+08:00
 
 BCC 是一个 BPF 编译器集合，包含了用于构建 BPF 程序的编程框架和库，并提供了大量可以直接使用的工具。
 
-> BCC makes BPF programs easier to write，with kernel instrumentation in C (and includes a C wrapper around LLVM)，and front-ends in Python and lua。It is suited for many tasks，including performance analysis and network traffic control。
+> BCC makes BPF programs easier to write, with kernel instrumentation in C (and includes a C wrapper around LLVM), and front-ends in Python and lua. It is suited for many tasks, including performance analysis and network traffic control.
 
 如何安装以及环境配置等问题就不多提了，我使用的是 Arch Linux，可以在 [Installing BCC](https://github.com/iovisor/bcc/blob/master/INSTALL.md) 上查看如何在各种 Linux 发行版上安装 BCC (对内核要求较高)。
 
@@ -110,8 +110,8 @@ b'             zsh-27651   [024] d..31 184377.212267: bpf_trace_printk: Hello, W
 
 ## Reference
 
-[eBPF Documentation：What is eBPF？](https://ebpf.io/what-is-ebpf)
+[eBPF Documentation: What is eBPF?](https://ebpf.io/what-is-ebpf)
 
-[Learn eBPF Tracing：Tutorial and Examples](https://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
+[Learn eBPF Tracing: Tutorial and Examples](https://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
 
 [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)

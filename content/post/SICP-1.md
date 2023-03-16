@@ -88,7 +88,7 @@ b
   ((if (> b 0) + -) a b))
 ```
 
-**Model of evaluation allows for combinations whose operators are compound expressions。** 
+**Model of evaluation allows for combinations whose operators are compound expressions.** 
 
 这里 `(if (> b 0) + -)` 是一个复合表达式的组合式，它作为了运算符，也很好理解，从 procedure 的名字可以看出，过程的行为是 `a+|b|`，当 `b>0` 时，返回值是 `a+b`，而当 `a<b` 时，返回值为 `a-b`。
 
@@ -301,7 +301,7 @@ $$
 ```
 
 $$
-pascal(col,row)=\frac {row！} {col！·(row-col)！}
+pascal(col,row)=\frac {row!} {col!·(row-col)!}
 $$
 
 https://sicp.readthedocs.io/en/latest/chp1/12.html
@@ -360,7 +360,7 @@ https://sicp.readthedocs.io/en/latest/chp1/15.html
 $$
 (b^\frac {n} {2})^2 = (b^2)^\frac {n} {2}
 $$
-不变量 `a*b^n`，当 n 从 n 变化到0时，a 就等于 `b^n`，当 n 为奇数时，`a*b^n` 和 `a*b*b^n-1` 相等，当 n 为偶数时，`a*b^n` 和 `a*(b^2)^(n/2)` 相等。翻译成 go 代码如下：
+不变量 `a*b^n`，当 n 从 n 变化到 0 时，a 就等于 `b^n`，当 n 为奇数时，`a*b^n` 和 `a*b*b^n-1` 相等，当 n 为偶数时，`a*b^n` 和 `a*(b^2)^(n/2)` 相等。翻译成 go 代码如下：
 
 ```go
 func fastExp(b, n int) int {
@@ -963,7 +963,7 @@ if __name__ == '__main__':
     print(tan_cf(0,100))
     print(tan_cf(3.1415926/2,100))
 # 0.0
-# 37320539.58514773 相当于无穷大，因为这里的pi，是近似值
+# 37320539.58514773 相当于无穷大，因为这里的 pi，是近似值
 ```
 
 ## Exercise 1.40

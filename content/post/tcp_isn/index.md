@@ -17,7 +17,7 @@ date: 2021-03-30T19:46:39+08:00
 
 在 TCP/IP 详解的第二版书中提到：
 
-> 在现代系统中，ISN 通常以半随机方式选择。Linux 要选择自己的 ISN，需要经过一个相当复杂的过程。它使用基于时钟的方案，但在每个连接的随机偏移处开始时钟。随机偏移量被选择为连接标识符 (4 元组) 上的加密散列函数。散列函数的秘密输入每5分钟更改一次。在 `ISN` 中的 32 位中，最高的 8 位是秘密的序列号，其余的位由散列生成。这会产生一种很难猜测的 `ISN`，但也会随着时间的推移而增加。
+> 在现代系统中，ISN 通常以半随机方式选择。Linux 要选择自己的 ISN，需要经过一个相当复杂的过程。它使用基于时钟的方案，但在每个连接的随机偏移处开始时钟。随机偏移量被选择为连接标识符 (4 元组) 上的加密散列函数。散列函数的秘密输入每 5 分钟更改一次。在 `ISN` 中的 32 位中，最高的 8 位是秘密的序列号，其余的位由散列生成。这会产生一种很难猜测的 `ISN`，但也会随着时间的推移而增加。
 
 现在的 Linux 实现有无变化我没有考证，但是由上述内容可以知道 `ISN` 的选择需要考虑两方面：
 
@@ -26,7 +26,7 @@ date: 2021-03-30T19:46:39+08:00
 
 ## Reference
 
-[TCP/IP Illustrated，Volume 1 The Protocol - Kevin R。Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
+[TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
 
 [RFC0793](https://datatracker.ietf.org/doc/html/rfc793)
 

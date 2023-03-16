@@ -7,7 +7,7 @@ date: 2023-03-04T14:44:29+08:00
 
 经常折腾服务器的同学对于 [Proxmox VE](https://www.proxmox.com/en/proxmox-ve) (Proxmox Virtual Environment，PVE) 想必不陌生，这个基于 debian 的虚拟化平台作为一个开源免费的方案，非常的好用。PVE 是一个完整的、开源的虚拟化服务器管理平台。它将 KVM 管理程序和 Linux Containers ([LXC](https://en.wikipedia.org/wiki/LXC))、软件定义的存储和网络功能紧密集成在单个平台上。使用集成的基于 Web 的用户界面，使得用户可以轻松地管理虚拟机和容器。
 
-之前我一直在思索如何更高效的利用囤积的 VPS，萌生了将 PVE 安装到云服务器 (VPS) 的想法。并在去年10月，我将这个方案 (**Cloud PVE**) 成功实现，并把个人的一些私有服务 (Self Hosted Services) 迁移到了在公有云上的 Cloud PVE。时隔 5 个月，距离写下本文我的 Cloud PVE 方案已经稳定运行了 **148** 天。说明该方案的稳定性有一定的保证，作为一个***个人的云服务器管理环境***，我觉得很不错，因此写下本文，分享一下这个方案。
+之前我一直在思索如何更高效的利用囤积的 VPS，萌生了将 PVE 安装到云服务器 (VPS) 的想法。并在去年 10 月，我将这个方案 (**Cloud PVE**) 成功实现，并把个人的一些私有服务 (Self Hosted Services) 迁移到了在公有云上的 Cloud PVE。时隔 5 个月，距离写下本文我的 Cloud PVE 方案已经稳定运行了 **148** 天。说明该方案的稳定性有一定的保证，作为一个***个人的云服务器管理环境***，我觉得很不错，因此写下本文，分享一下这个方案。
 
 具体来说，Cloud PVE 的个人云服务器配置方案有以下优缺点：
 
@@ -58,7 +58,7 @@ date: 2023-03-04T14:44:29+08:00
 
 在 PVE 的网络设置中，分别创建 `vmbr0` 和 `vmbr1`，并为其指定 CIDR，CIDR 由个人喜好决定。
 
-![PVE网络配置](image-20230304211750387.png)
+![PVE 网络配置](image-20230304211750387.png)
 
 如图，在我的演示配置中：
 
@@ -119,7 +119,7 @@ pct create 100 immortalwrt-x86-64-generic-rootfs.tar.gz \
 
 在 OpenWrt 对应的 LXC 的网络配置中，添加如下配置。其中，`eth0` 对应 WAN，桥接到 `vmbr0`，`eth1` 对应 LAN，桥接到 `vmbr1`。
 
-![配置OpenWrt的网络](image-20230304223311772.png)
+![配置 OpenWrt 的网络](image-20230304223311772.png)
 
 ### 配置 LAN
 
@@ -148,13 +148,13 @@ ssh -L 8080:192.168.200.1:80 root@cloud_pve_ip_address
 
 如图，添加 eth0 作为 wan 口，协议选择静态，CIDR 为 `192.168.100.2/24`，网关设置为 `192.168.100.1`。
 
-![OpenWrt的WAN配置](image-20230304225530450.png)
+![OpenWrt 的 WAN 配置](image-20230304225530450.png)
 
 ## 创建其他容器
 
-![创建LXC容器](image-20230305134439395.png)
+![创建 LXC 容器](image-20230305134439395.png)
 
-![LXC开启嵌套](image-20230305134912727.png)
+![LXC 开启嵌套](image-20230305134912727.png)
 
 在创建其他 LXC 容器时，需要将容器的网卡桥接到 `vmbr1`，也就是 OpenWrt 的 LAN。在其他容器中测试网络联通行，可以成功 ping 通外界网络即配置成功。
 

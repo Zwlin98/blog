@@ -23,7 +23,7 @@ date: 2022-05-27T09:48:34+08:00
 | 键（组合键）  | 功能（映射）                                                 |
 | ------------- | ------------------------------------------------------------ |
 | Right Command | 单独按还是 Command，当和别的键「KEY」一起按时，映射成 Control + Option + Comand + 「KEY」 |
-| Right Option  | 映射成Comma，也就是逗号键，用作我vim的第二个Leader（第一个Leader是空格） |
+| Right Option  | 映射成 Comma，也就是逗号键，用作我 vim 的第二个 Leader（第一个 Leader 是空格） |
 | Left Control  | 单独按是切换输入法，当和别的键「KEY」一起按时，映射成 Control  + 「KEY」 |
 | Tab + hjkl    | 映射成方向键                                                 |
 
@@ -72,11 +72,11 @@ date: 2022-05-27T09:48:34+08:00
 
 有了这个超级键 `Control + Option + Comand` 之后，你就可以用这个 Super Prefix 来配置自己的快捷键，例如使用 Thor，Ray Cast，HammerSpoon 等软件，映射自己的快捷键。
 
-| 组合键 （Super Prefix 用 SP 指代） | 功能                              |
+| 组合键（Super Prefix 用 SP 指代） | 功能                              |
 | ---------------------------------- | --------------------------------- |
-| SP + ` (反单引号，HHKB最右上角）   | 切换到终端（iterm2）              |
-| SP + d                             | 使用dash搜索 （用raycast完成）    |
-| SP + v                             | 从剪贴板历史粘贴（用raycast完成） |
+| SP + ` (反单引号，HHKB 最右上角）   | 切换到终端（iterm2）              |
+| SP + d                             | 使用 dash 搜索（用 raycast 完成）    |
+| SP + v                             | 从剪贴板历史粘贴（用 raycast 完成） |
 | SP + 1                             | 打开 Chrome                       |
 | …                                  | …                                 |
 

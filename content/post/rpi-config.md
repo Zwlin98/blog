@@ -10,7 +10,7 @@ date: 2020-01-12 13:38:06
 个人使用官方镜像，可以在[官网](https://www.raspberrypi.org/downloads/)下载到，推荐使用[官方的系统](https://www.raspberrypi.org/downloads/raspbian/)带桌面的但不带推荐软件，这样可以省去安装很多软件，同时如果不需要桌面，也可以考虑 lite 版。
 <!--more-->
 下载完镜像之后，可以使用官方推荐的 [balenaEtcher](https://www.balena.io/etcher/) 写到 SD 卡里，但是我这里使用的是 [Rufus](https://rufus.ie/) 是一个功能非常强大的，开源免费的快速制作 U 盘系统启动盘和格式化 USB 的实用小工具，实测发现，它也可以用来写树莓派的镜像。Rufus 非常好用，体积很小，只有几 M 而已，而且绿色免安装。我平时重装系统，制作系统镜像等都是使用 Rufus 来完成的。
-![Rufus界面](https://blog-1300571114.cos.ap-shanghai.myqcloud.com/2020-01-12_14-20-28.png)
+![Rufus 界面](https://blog-1300571114.cos.ap-shanghai.myqcloud.com/2020-01-12_14-20-28.png)
 选择 SD 卡之后，点开始即可。
 
 ## 开启 SSH
