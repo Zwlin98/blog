@@ -5,27 +5,27 @@ date: 2022-05-10T09:41:51+08:00
 
 ## 👏
 
-这是我的博客，主要记录我学习与生活过程中的一些记录与思考，以及我的一些作品，内容虽然可能有些简单，但是你要是感兴趣，订阅 [RSS](https://blog.zwlin.io/index.xml)  关注我，我会非常开心！😊
+这是我的博客，主要记录我学习与生活过程中的一些记录与思考，以及我的一些作品，内容虽然可能有些简单，但是你要是感兴趣，订阅 [RSS](https://blog.zwlin.io/index.xml) 关注我，我会非常开心！😊
 
-### 关于我 
+### 关于我
 
-我是 Zwlin，98年出生，目前计科研究生在读，研究偏向软件工程，主要关注**配置文件与云原生**。本科开始学习编程，打过三年`ICPC`。
+我是 Zwlin，98年出生，目前计科研究生在读，研究偏向软件工程，主要关注**配置文件与云原生**。本科开始学习编程，打过三年 `ICPC`。
 
 我热爱开源，喜欢探索各种新技术，捣鼓各种电子产品。
 
 ### 关于语言
 
-在本科竞赛时期一直用`C++`写代码，在退役之后就基本不怎么用了，比较喜欢没有太多历史包袱的新语言，像Go，Rust(还没来的及学)。
+在本科竞赛时期一直用 `C++` 写代码，在退役之后就基本不怎么用了，比较喜欢没有太多历史包袱的新语言，像 Go，Rust (还没来的及学)。
 
-+ `Go` 是我最常用的语言，我喜欢她的简洁，也讨厌她的简洁。她对于并发的抽象很像学校里学习到的，CSP也很好理解，用Go写并发真的很快乐。
-+ `Haskell` 也是一门非常优雅的语言，我对于函数式编程的认识，来自于SICP这本书中的`Scheme`,之后就逐渐喜欢上了函数式的一些特性与思想进而学习了`Haskell`。`Haskell`的强类型也和`Go`有异曲同工之感，`Haskell`的类型约束给我一种强烈的信心，通过类型检查的代码基本就是写对了。
-+ `Python` *Life is short, you need Python!* 在我写一些小脚本的时候，或者验证一些的想法时，往往就会打开`vim`或者`jupyter`，`Python`会很快的告诉我答案，`Python`也非常适合用来做原型语言，在有了原型之后，再用别的语言完善。
++ `Go` 是我最常用的语言，我喜欢她的简洁，也讨厌她的简洁。她对于并发的抽象很像学校里学习到的，CSP 也很好理解，用 Go 写并发真的很快乐。
++ `Haskell` 也是一门非常优雅的语言，我对于函数式编程的认识，来自于 SICP 这本书中的 `Scheme`，之后就逐渐喜欢上了函数式的一些特性与思想进而学习了 `Haskell`。`Haskell` 的强类型也和 `Go` 有异曲同工之感，`Haskell` 的类型约束给我一种强烈的信心，通过类型检查的代码基本就是写对了。
++ `Python` *Life is short，you need Python！*在我写一些小脚本的时候，或者验证一些的想法时，往往就会打开 `vim` 或者 `jupyter`，`Python` 会很快的告诉我答案，`Python` 也非常适合用来做原型语言，在有了原型之后，再用别的语言完善。
 
 ### 找到我
 
-欢迎和我交流任何有关技术的话题! 你可以通过以下方式找到我:
+欢迎和我交流任何有关技术的话题！你可以通过以下方式找到我：
 
-- Email: [blog@zwlin.mozmail.com](mailto:blog@zwlin.mozmail.com)
-- GitHub: [@Zwlin98](https://github.com/Zwlin98)
-- Telegram: [@zwlin98](https://t.me/zwlin98)
-- Telegram Channel: [Zwlin's Channel](https://t.me/Zwlin_channel)
+- Email：[blog@zwlin.mozmail.com](mailto:blog@zwlin.mozmail.com)
+- GitHub： [@Zwlin98](https://github.com/Zwlin98)
+- Telegram： [@zwlin98](https://t.me/zwlin98)
+- Telegram Channel：[Zwlin's Channel](https://t.me/Zwlin_channel)

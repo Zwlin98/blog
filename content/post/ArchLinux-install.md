@@ -6,15 +6,15 @@ date: 2020-04-29 20:27:19
 
 # 制作镜像
 
-从官网下载镜像，验证签名，并制作U盘镜像，Windows平台可通过Rufus
+从官网下载镜像，验证签名，并制作 U 盘镜像，Windows 平台可通过 Rufus
 
-# 从U盘启动
+# 从 U 盘启动
 
-推荐UEFI模式
+推荐 UEFI 模式
 
 # 联网
 
-1. 插网线情况下，通过dhcpcd
+1. 插网线情况下，通过 dhcpcd
 ```shell
 dhcpcd
 ```
@@ -22,7 +22,7 @@ dhcpcd
 ```bash
 wifi-menu
 ```
-3. 利用ping测试联网成功与否
+3. 利用 ping 测试联网成功与否
 
 # 更新系统时间
 ```shell
@@ -35,7 +35,7 @@ timedatectl set-ntp true
 fdisk /dev/sda
 ```
 
-假设分区成`/dev/sda1` 512M作为引导分区,`/dev/sda2`剩下全部空间作为根分区
+假设分区成 `/dev/sda1` 512M 作为引导分区，`/dev/sda2` 剩下全部空间作为根分区
 
 ## 挂载分区
 ```shell
@@ -62,7 +62,7 @@ Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 pacstrap /mnt base base-devel linux linux-firmware dhcpcd netctl
 ```
 
-# 配置fstab
+# 配置 fstab
 
 ```shell
 genfstab -L /mnt >> /mnt/etc/fstab
@@ -88,7 +88,7 @@ pacman -S vim dialog wpa_supplicant networkmanager netctl
 vim /etc/locale.gen
 ```
 
-在文件中找到`zh_CN.UTF-8 UTF-8` `zh_HK.UTF-8 UTF-8` `zh_TW.UTF-8 UTF-8` `en_US.UTF-8 UTF-8`这四行，去掉行首的#号，保存并退出。
+在文件中找到 `zh_CN.UTF-8 UTF-8` `zh_HK.UTF-8 UTF-8` `zh_TW.UTF-8 UTF-8` `en_US.UTF-8 UTF-8` 这四行，去掉行首的#号，保存并退出。
 
 ```shell
 locale-gen
@@ -107,21 +107,21 @@ LANG=en_US.UTF-8
 vim /etc/hostname #在文件的第一行输入你自己设定的一个myhostname
 vim /etc/hosts
 ```
-在文件末添加如下内容（将`myhostname`替换成你自己设定的主机名）
+在文件末添加如下内容 (将 `myhostname` 替换成你自己设定的主机名)
 ```config
 127.0.0.1	localhost
 ::1		localhost
 127.0.1.1	myhostname.localdomain	myhostname
 ```
 
-# 设置root密码与安装Intel-ucode
+# 设置 root 密码与安装 Intel-ucode
 
 ```shell
 passwd
 pacman -S intel-ucode
 ```
 
-# 安装grub2
+# 安装 grub2
 
 ```shell
 pacman -S grub efibootmgr

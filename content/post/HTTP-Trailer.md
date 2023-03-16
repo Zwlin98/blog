@@ -16,11 +16,11 @@ Trailer: header-names
 
 header-names 是出现在分块信息挂载部分的消息首部。以下首部字段**不允许**出现：
 
-- 用于信息分帧的首部 (例如[`Transfer-Encoding`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Transfer-Encoding) 和  [`Content-Length`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Length)),
+- 用于信息分帧的首部 (例如 [`Transfer-Encoding`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Transfer-Encoding) 和 [`Content-Length`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Length))，
 - 用于路由用途的首部 (例如 [`Host`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Host))，
-- 请求修饰首部 (例如控制类和条件类的，如[`Cache-Control`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)，[`Max-Forwards`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Max-Forwards)，或者 [`TE`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/TE))，
+- 请求修饰首部 (例如控制类和条件类的，如 [`Cache-Control`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)，[`Max-Forwards`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Max-Forwards)，或者 [`TE`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/TE))，
 - 身份验证首部 (例如 [`Authorization`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Authorization) 或者 [`Set-Cookie`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie))，
-- [`Content-Encoding`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Encoding), [`Content-Type`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Type), [`Content-Range`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Range)，以及 `Trailer` 自身。
+- [`Content-Encoding`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Encoding)，[`Content-Type`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Type)，[`Content-Range`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Range)，以及 `Trailer` 自身。
 
 ## Example
 
@@ -43,13 +43,13 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 
 解释：
 
-1. `Header`里面的`Transfer-Encoding`必须是`chunked`，也就是说不能指定`Content-Length`。
-2. `Trailer` 的字段名字必须在 `Header`里面提前声明，比如上面的`Trailer: Expires`。
-3. `Trailer` 在`Body`发完之后再发，格式和`Header`类似。
+1. `Header` 里面的 `Transfer-Encoding` 必须是 `chunked`，也就是说不能指定 `Content-Length`。
+2. `Trailer` 的字段名字必须在 `Header` 里面提前声明，比如上面的 `Trailer: Expires`。
+3. `Trailer` 在 `Body` 发完之后再发，格式和 `Header` 类似。
 
 ## Implement in Go
 
-用Go实现一个HTTP客户端，对所发的`Body`计算`MD5`并通过`Trailer`传给服务端。服务端收到请求并对Body进行校验。
+用 Go 实现一个 HTTP 客户端，对所发的 `Body` 计算 `MD5` 并通过 `Trailer` 传给服务端。服务端收到请求并对 Body 进行校验。
 
 ### Server Code
 
@@ -190,14 +190,14 @@ size: 4
 
 ## Conclusion
 
-可以看到服务端在读完body之前只能知道有`Md5`这个`Trailer`，值为空；读完body之后，能正常拿到`Trailer`的`Md5`值。
+可以看到服务端在读完 body 之前只能知道有 `Md5` 这个 `Trailer`，值为空；读完 body 之后，能正常拿到 `Trailer` 的 `Md5` 值。
 
-Go语言使用`Trailer`也有几个注意事项：
+Go 语言使用 `Trailer` 也有几个注意事项：
 
-1. `req.ContentLength` 必须设置为`0`或者`-1`，这样`body`才会以`chunked`的形式传输。
-2. `req.Trailer`需要在发请求之前声明所有的key字段，在body发完之后设置相应的value，如果客户端提前知道`Trailer`的值的话也可以提前设置，比如上面例子里面的`size`字段。
-3. 发完`body`之后`Trailer`不允许再更改，否则可能会因为map并发读写，导致程序panic，同样的道理服务端在读`body`的时候也不应该对`Trailer`有引用。
-4. 服务端**必须**读完`body`之后才能知道`Trailer`的值。
+1. `req.ContentLength` 必须设置为 `0` 或者 `-1`，这样 `body` 才会以 `chunked` 的形式传输。
+2. `req.Trailer` 需要在发请求之前声明所有的 key 字段，在 body 发完之后设置相应的 value，如果客户端提前知道 `Trailer` 的值的话也可以提前设置，比如上面例子里面的 `size` 字段。
+3. 发完 `body` 之后 `Trailer` 不允许再更改，否则可能会因为 map 并发读写，导致程序 panic，同样的道理服务端在读 `body` 的时候也不应该对 `Trailer` 有引用。
+4. 服务端**必须**读完 `body` 之后才能知道 `Trailer` 的值。
 
 ## References
 

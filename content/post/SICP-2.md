@@ -55,7 +55,7 @@ date: 2021-08-22T15:52:21+08:00
 
 ## Exercise 2.3
 
-用对角线来表示矩形，只要不论矩形的具体表示方法，只要`width-rectangle`和`height-rectangle`能够正确的返回矩形的宽和高，周长和面积的计算即为正确的。
+用对角线来表示矩形，只要不论矩形的具体表示方法，只要 `width-rectangle` 和 `height-rectangle` 能够正确的返回矩形的宽和高，周长和面积的计算即为正确的。
 
 ```scheme
 (define (abs x)
@@ -86,9 +86,9 @@ date: 2021-08-22T15:52:21+08:00
 
 ## Exercise 2.4
 
-很有意思的一道题，这里的`cons`返回一个`procedure`,接收的参数`m`也是一个`procedure`,`(car z)`相当于把`(lambda (p q) p)`作为m，就变成`((lambda (p q) p) x y)`
+很有意思的一道题，这里的 `cons` 返回一个 `procedure`，接收的参数 `m` 也是一个 `procedure`，`(car z)` 相当于把 `(lambda (p q) p)` 作为 m，就变成 `((lambda (p q) p) x y)`
 
- 完整的相当于
+完整的相当于
 
 ```scheme
 ((lambda (m) (m x y)) (lambda (p q) p))
@@ -128,7 +128,7 @@ date: 2021-08-22T15:52:21+08:00
 
 https://www.wikiwand.com/zh-cn/%E9%82%B1%E5%A5%87%E6%95%B0
 
-lamba演算，暂时不想了解，多学习之后再说吧
+lamba 演算，暂时不想了解，多学习之后再说吧
 
 ## Exercise 2.7
 
@@ -150,7 +150,7 @@ lamba演算，暂时不想了解，多学习之后再说吧
 
 ## Exercise 2.9
 
-对于区间的加减法，组合（加法或减法）区间的宽度就是被加（或减）的区间的宽度的函数。对于乘除法而说，则没有这个规律。
+对于区间的加减法，组合 (加法或减法) 区间的宽度就是被加 (或减) 的区间的宽度的函数。对于乘除法而说，则没有这个规律。
 
 ## Exercise 2.10
 
@@ -166,7 +166,7 @@ lamba演算，暂时不想了解，多学习之后再说吧
 
 ## Exercise 2.11
 
-题目说的9种是怎么形成的，无非就是区间大于0，小于0，横跨0，这三种情况，然后两个区间组合的话，就有9种了。
+题目说的 9 种是怎么形成的，无非就是区间大于 0，小于 0，横跨 0，这三种情况，然后两个区间组合的话，就有 9 种了。
 
 ## Exercise 2.12
 
@@ -189,7 +189,7 @@ lamba演算，暂时不想了解，多学习之后再说吧
 
 ## Exercise 2.13
 
-  证明略
+证明略
 
 ## Exercise 2.14-2.16
 
@@ -668,7 +668,7 @@ https://sicp.readthedocs.io/en/latest/chp2/22.html
 
 ## Exercise 2.43
 
-Exercise 2.42 的 `queens` 函数对于每个棋盘 `(queen-cols k)` ，使用 `enumerate-interval` 产生 `board-size` 个棋盘。而 Louis 的 `queens` 函数对于 `(enumerate-interval 1 board-size)` 的每个 `k` ，都要产生 `(queen-cols (- k 1))` 个棋盘。因此， Louis 的 `queens` 函数的运行速度大约是原来 `queens` 函数的 `board-size` 倍，也即是 `T * board-size` 。
+Exercise 2.42 的 `queens` 函数对于每个棋盘 `(queen-cols k)`，使用 `enumerate-interval` 产生 `board-size` 个棋盘。而 Louis 的 `queens` 函数对于 `(enumerate-interval 1 board-size)` 的每个 `k`，都要产生 `(queen-cols (- k 1))` 个棋盘。因此，Louis 的 `queens` 函数的运行速度大约是原来 `queens` 函数的 `board-size` 倍，也即是 `T * board-size`。
 
 参考：https://sicp.readthedocs.io/en/latest/chp2/43.html
 
@@ -750,7 +750,7 @@ Exercise 2.42 的 `queens` 函数对于每个棋盘 `(queen-cols k)` ，使用 `
 
 ## Exercise 2.49
 
- 这题要运行的话需要使用`sicp-pict`包里的`segments->painter`，和`make-vect`以及`make-segment`。不要使用前面几个练习中自己定义的，以及书本中的`segments->painter`。
+这题要运行的话需要使用 `sicp-pict` 包里的 `segments->painter`，和 `make-vect` 以及 `make-segment`。不要使用前面几个练习中自己定义的，以及书本中的 `segments->painter`。
 
 ```scheme
 (define left-bottom (make-vect 0 0))
@@ -910,7 +910,7 @@ Exercise 2.42 的 `queens` 函数对于每个棋盘 `(queen-cols k)` ，使用 `
 
 ## Exercise 2.55
 
-根据 97 页的注释 100 ，符号 `'` 在求值时会被替换成 `quote` 特殊形式，因此，求值：
+根据 97 页的注释 100，符号 `'` 在求值时会被替换成 `quote` 特殊形式，因此，求值：
 
 ```scheme
 (car ''abracadabra)
@@ -922,7 +922,7 @@ Exercise 2.42 的 `queens` 函数对于每个棋盘 `(queen-cols k)` ，使用 `
 (car '(quote abracadabra))
 ```
 
-因此 `car` 取出的是第一个 `quote` 的 `car` 部分，而这个 `car` 部分就是 `'quote` ，所以返回值就是 `quote` 
+因此 `car` 取出的是第一个 `quote` 的 `car` 部分，而这个 `car` 部分就是 `'quote`，所以返回值就是 `quote`
 
 ## Exercise 2.56
 
@@ -1071,7 +1071,7 @@ Exercise 2.42 的 `queens` 函数对于每个棋盘 `(queen-cols k)` ，使用 `
 
 ## Exercise 2.58
 
-Q(a):
+Q(a)：
 
 ```scheme
 (define (sum? x)
@@ -1105,11 +1105,11 @@ Q(a):
 (define (multiplicand p) (caddr p))
 ```
 
-Q(b):
+Q(b)：
 
 如果允许使用标准代数写法的话，那么我们就没办法只是通过修改谓词、选择函数和构造函数来达到正确计算求导的目的，因为这必须要修改 `deriv` 函数，提供符号的优先级处理功能。
 
-比如说，对于输入 `x + y * z` ，有两种可能的求导顺序会产生（称之为二义性文法），一种是 `(x + y) * z` ，另一种是 `x + (y * z)` ；对于求导计算来说，后一种顺序才是正确的，但是这种顺序必须通过修改 `deriv` 来提供，只是修改谓词、选择函数和构造函数是没办法达到调整求导顺序的目的的。
+比如说，对于输入 `x + y * z`，有两种可能的求导顺序会产生 (称之为二义性文法)，一种是 `(x + y) * z`，另一种是 `x + (y * z)`；对于求导计算来说，后一种顺序才是正确的，但是这种顺序必须通过修改 `deriv` 来提供，只是修改谓词、选择函数和构造函数是没办法达到调整求导顺序的目的的。
 
 ## Exercise 2.59
 
@@ -1173,23 +1173,23 @@ Q(b):
 
 两者都是中序遍历，二叉排序树的中序遍历就是递增顺序的，故而尽管树的形状不同，但是中序遍历的结果都相同。
 
-`tree->list-1`是树形递归，`tree->list-2`也是树形递归，它们都需要访问每个节点一次，所以说它们的时间复杂度是一样的。但是由于`tree->list-1`中用了append过程，append过程本身是`O(n)`，所以`tree->list-1`的时间要长一些。
+`tree->list-1` 是树形递归，`tree->list-2` 也是树形递归，它们都需要访问每个节点一次，所以说它们的时间复杂度是一样的。但是由于 `tree->list-1` 中用了 append 过程，append 过程本身是 `O(n)`，所以 `tree->list-1` 的时间要长一些。
 
 ## Exercise 2.64
 
-Q(a):
+Q(a)：
 
- `partial-tree`的工作原理为，先找出中间的元素来做根节点，然后依次递归调用求出左子树与右子树，最后调用`make-tree`把这三者组合起来。
+`partial-tree` 的工作原理为，先找出中间的元素来做根节点，然后依次递归调用求出左子树与右子树，最后调用 `make-tree` 把这三者组合起来。
 
-Q(b):
+Q(b)：
 
-这个问题问的是`list->tree`的时间复杂度。`partial-tree`这里其实只是对每个节点访问了一次，`make-tree`本身是`O(1)`的 所以`list->tree`是`O(n)`的。
+这个问题问的是 `list->tree` 的时间复杂度。`partial-tree` 这里其实只是对每个节点访问了一次，`make-tree` 本身是 `O(1)` 的所以 `list->tree` 是 `O(n)` 的。
 
 ## Exercise 2.65
 
-1. 用`tree->list-2`把树转为有序列表
-2. 用有序列表的`union-set`与`intersection-set`方法
-3. 用`list->tree`把上面两个方法的结果再转为平衡树
+1. 用 `tree->list-2` 把树转为有序列表
+2. 用有序列表的 `union-set` 与 `intersection-set` 方法
+3. 用 `list->tree` 把上面两个方法的结果再转为平衡树
 
 ## Exercise 2.66
 
@@ -1302,15 +1302,15 @@ Q(b):
 ;Value 84
 ```
 
-变长huffman编码为84位二进制，定长编码8个字符需要用3位二进制，故需要3*36 = 108二进制。
+变长 huffman 编码为 84 位二进制，定长编码 8 个字符需要用 3 位二进制，故需要 3*36 = 108 二进制。
 
 ## Exercise 2.71
 
-For the most frequent symbol need just `1` bit, for the least frequent symbol need `n-1` bit.
+For the most frequent symbol need just `1` bit，for the least frequent symbol need `n-1` bit。
 
 ## Exercise 2.72
 
-编码字符的次数为 nn ，那么对最频繁出现的字符进行编码的复杂度为 `Θ(n)` ，而对最不频繁出现的字符进行编码的复杂度为 `Θ(n^2)`.
+编码字符的次数为 nn，那么对最频繁出现的字符进行编码的复杂度为 `Θ(n)`，而对最不频繁出现的字符进行编码的复杂度为 `Θ(n^2)`。
 
 ## Exercise 2.73
 
@@ -1374,7 +1374,7 @@ b)
 
 ## Exercise 2.76
 
- `explicit dispatch` 在增加新操作时需要使用者避免命名冲突，而且每当增加新类型时，所有通用操作都需要做相应的改动，这种策略不具有可加性，因此无论是增加新操作还是增加新类型，这种策略都不适合。
+`explicit dispatch` 在增加新操作时需要使用者避免命名冲突，而且每当增加新类型时，所有通用操作都需要做相应的改动，这种策略不具有可加性，因此无论是增加新操作还是增加新类型，这种策略都不适合。
 
 `data-directed style` 可以很方便地通过包机制增加新类型和新的通用操作，因此无论是增加新类型还是增加新操作，这种策略都很适合。
 

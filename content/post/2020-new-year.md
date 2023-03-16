@@ -12,11 +12,11 @@ date: 2020-01-01 19:15:52
 寒假过完就是大四下学期了，大学生活匆匆过去，若是考研成功，就是继续读书了，若是没考上，那么就是正式步入社会，开始工作了。新的一年，有新的展望，我想在2020年坚持几件事情：
 
 + 坚持博客写作，至少每周一篇
-+ Linux技术更上一层楼
++ Linux 技术更上一层楼
 + 学习并懂得设计模式
-+ Python技术更上一层楼
-+ 找到好工作(考上的话另说)
++ Python 技术更上一层楼
++ 找到好工作 (考上的话另说)
 
 五个目标，不知道2020年结束时能完成几个，但是加油！
 
-> Consider everything deeply but still remain fearless.
+> Consider everything deeply but still remain fearless。

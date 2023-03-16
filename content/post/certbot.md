@@ -2,7 +2,7 @@
 title: Certbot证书有关设置
 date: 2020-01-31 10:34:19
 ---
-更新证书的步骤比较麻烦，特此记录，因为我用的是`certbot`提供的泛域名的证书功能，我只会手动申请。而且貌似dnspod并不支持certbot提供的插件，故而只能手动更新。
+更新证书的步骤比较麻烦，特此记录，因为我用的是 `certbot` 提供的泛域名的证书功能，我只会手动申请。而且貌似 dnspod 并不支持 certbot 提供的插件，故而只能手动更新。
 
 <!--more-->
 1. 申请泛域名证书
@@ -11,9 +11,9 @@ certbot certonly --preferred-challenges dns --manual  \
 -d "example.com" \
 --server https://acme-v02.api.letsencrypt.org/directory
 ```
-2. 根据提示添加DNS的TXT记录
+2. 根据提示添加 DNS 的 TXT 记录
 3. 生成证书
-4. 更新nginx的证书设置，在最顶层统一设置证书，修改
+4. 更新 nginx 的证书设置，在最顶层统一设置证书，修改
 ```nginx
 # /etc/nginx/nginx.conf 
 http {

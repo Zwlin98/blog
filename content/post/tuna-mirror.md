@@ -12,10 +12,10 @@ date: 2019-12-27 10:32:39
 
 [使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 <!-- more -->
-## Ubuntu及各种常见Linux发行版软件源
+## Ubuntu 及各种常见 Linux 发行版软件源
 
-**这里大力推荐清华的一键tuna脚本**
-一键使用 TUNA脚本，又名 oh-my-tuna 。它目前支持更改下列软件的配置，将其直接指向 TUNA 镜像站：
+**这里大力推荐清华的一键 tuna 脚本**
+一键使用 TUNA 脚本，又名 oh-my-tuna。它目前支持更改下列软件的配置，将其直接指向 TUNA 镜像站：
 + Anaconda
 + Arch Linux
 + TeX Live (by tlmgr)
@@ -23,7 +23,7 @@ date: 2019-12-27 10:32:39
 + Homebrew
 + PyPI
 + Ubuntu Linux
-详细使用参考其[github](https://github.com/tuna/oh-my-tuna)
+详细使用参考其 [github](https://github.com/tuna/oh-my-tuna)
 
 ## 树莓派镜像
 
