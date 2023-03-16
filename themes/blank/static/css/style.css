@@ -3,12 +3,14 @@ body {
   margin: 0 auto;
   padding: 1em;
   line-height: 1.5;
-  background: #f6f6f6;
+  background: #fff;
   max-width: 90ch;
   text-align: justify;
+  text-justify: inter-ideograph;
 }
+
 a {
-  color:#3b7e4d;
+  color: #258852;
   text-decoration: none;
 }
 
@@ -21,24 +23,30 @@ td {
   padding: 5px 10px;
   border-bottom: 2px solid #ddd;
 }
+
 /* header and footer areas */
 .menu {
   padding: 0;
 }
+
 .menu li {
   display: inline-block;
 }
+
 .article-meta,
 .menu a {
   text-decoration: none;
   padding: 5px;
 }
+
 .title {
   font-size: 1.1em;
 }
+
 footer a {
   text-decoration: none;
 }
+
 hr {
   border-style: dashed;
   color: #ddd;
@@ -50,4 +58,9 @@ hr {
 
 .page-list li {
   padding: 5px;
+}
+
+.chroma {
+  border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
