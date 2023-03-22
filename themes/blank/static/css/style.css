@@ -64,3 +64,11 @@ hr {
   border-radius: 10px;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
+
+blockquote {
+  border-left: 3px solid #258852;
+  padding: 0 1.4em;
+  color: #666;
+  margin: 0 2px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
