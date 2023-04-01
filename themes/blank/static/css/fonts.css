@@ -1,6 +1,7 @@
 body {
-  font-family: Optima, Candara, Calibri, Arial, sans-serif;
+  font-family: Optima, 'Noto Serif SC', sans-serif;
 }
+
 code {
   font-family: "Fira Code", Monaco, monospace;
   font-size: 80%;
