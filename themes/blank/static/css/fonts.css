@@ -1,8 +1,16 @@
 body {
-  font-family: Optima, 'Noto Serif SC', sans-serif;
+  font-family: 'Optima', 'Times New Roman', 'STSong', serif;
 }
 
 code {
-  font-family: "Fira Code", Monaco, monospace;
+  font-family: "Monaco", "Consolas", monospace;
   font-size: 80%;
+}
+
+.site-title {
+  font-size: 2.4em;
+}
+
+nav {
+  font-size: 1.1em;
 }

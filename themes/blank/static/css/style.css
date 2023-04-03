@@ -4,7 +4,7 @@ body {
   padding: 1em;
   line-height: 1.5;
   background: #fff;
-  max-width: 90ch;
+  max-width: 80ch;
   text-align: justify;
   text-justify: inter-ideograph;
 }
@@ -88,14 +88,12 @@ aside {
 }
 
 aside>p {
-  /* border-top: 1px solid;
-  border-bottom: 1px solid; */
   padding-top: 1px;
   margin-top: 0px;
   font-size: 80%;
 }
 
-@media screen and (max-width: 90ch) {
+@media screen and (max-width: 80ch) {
   aside {
     font-size: 80%;
     position: relative;
