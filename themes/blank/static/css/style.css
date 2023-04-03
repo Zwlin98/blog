@@ -109,3 +109,8 @@ aside>p {
     border-bottom: 1px solid;
   }
 }
+
+mark {
+  background-color: #cfb8;
+  color: #000;
+}
