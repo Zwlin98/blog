@@ -61,8 +61,9 @@ hr {
 }
 
 .chroma {
+  overflow-x: scroll;
   border-radius: 10px;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
 }
 
 blockquote {
@@ -71,4 +72,43 @@ blockquote {
   color: #666;
   margin: 0 2px;
   quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+#content {
+  position: relative;
+}
+
+aside {
+  width: 25%;
+  right: 100%;
+  text-align: justify;
+  position: absolute;
+  padding-right: 1em;
+  color: #888;
+}
+
+aside>p {
+  /* border-top: 1px solid;
+  border-bottom: 1px solid; */
+  padding-top: 1px;
+  margin-top: 0px;
+  font-size: 80%;
+}
+
+@media screen and (max-width: 90ch) {
+  aside {
+    font-size: 80%;
+    position: relative;
+    margin: 0.5em 0 0.5em auto;
+    padding: 0.2em 0.2em;
+    right: 0;
+    text-align: left;
+    width: initial;
+    max-width: 75%;
+  }
+
+  aside>p {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
 }

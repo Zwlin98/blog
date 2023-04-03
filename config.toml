@@ -1,6 +1,7 @@
 baseURL = "https://blog.zwlin.io"
 title = "Zwlin's Blog"
 theme = "blank"
+
 disableKinds = ['taxonomy', 'term','section']
 [author]                  # essential                     # 必需
   name = "Zwlin"
@@ -39,4 +40,4 @@ disableKinds = ['taxonomy', 'term','section']
     noClasses = false 
     style = 'igor'
     lineNos = true 
-    lineNumbersInTable = false
+    lineNumbersInTable = false 
