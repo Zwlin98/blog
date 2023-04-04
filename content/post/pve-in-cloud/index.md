@@ -7,7 +7,7 @@ date: 2023-03-04T14:44:29+08:00
 
 经常折腾服务器的同学对于 [Proxmox VE](https://www.proxmox.com/en/proxmox-ve) (Proxmox Virtual Environment，PVE) 想必不陌生，这个基于 debian 的虚拟化平台作为一个开源免费的方案，非常的好用。PVE 是一个完整的、开源的虚拟化服务器管理平台。它将 KVM 管理程序和 Linux Containers ([LXC](https://en.wikipedia.org/wiki/LXC))、 软件定义的存储和网络功能紧密集成在单个平台上。使用集成的基于 Web 的用户界面，使得用户可以轻松地管理虚拟机和容器。
 
-之前我一直在思索如何更高效的利用囤积的 VPS，萌生了将 PVE 安装到云服务器 (VPS) 的想法。并在去年 10 月，我将这个方案 (**Cloud PVE**) 成功实现，并把个人的一些私有服务 (Self Hosted Services) 迁移到了在公有云上的 Cloud PVE。时隔 5 个月，距离写下本文我的 Cloud PVE 方案已经稳定运行了{{< mark text="148" >}} 天。说明该方案的稳定性有一定的保证，作为一个***个人的云服务器管理环境***，我觉得很不错，因此写下本文，分享一下这个方案。
+之前我一直在思索如何更高效的利用囤积的 VPS，萌生了将 PVE 安装到云服务器 (VPS) 的想法。并在去年 10 月，我将这个方案 (**Cloud PVE**) 成功实现，并把个人的一些私有服务 (Self Hosted Services) 迁移到了在公有云上的 Cloud PVE。时隔 5 个月，距离写下本文我的 Cloud PVE 方案已经稳定运行了*148*天。说明该方案的稳定性有一定的保证，作为一个*个人的云服务器管理环境*，我觉得很不错，因此写下本文，分享一下这个方案。
 
 
 
@@ -172,8 +172,10 @@ ssh -L 8080:192.168.200.1:80 root@cloud_pve_ip_address
 
 自此，Cloud PVE 方案已经基本完成，通过创建不同 LXC 容器对不同服务进行隔离，对服务器资源进行更细粒度的划分。同时服务本身在云上，可以更便捷的通过云服务商的内网访问资源。但是对于**外界应该如何访问部署在内部 LXC 容器的服务 (内网穿透问题)**，本文仍然没有解决，我会在之后的博文给出我的解决方案。
 
+{{% ref %}}
 ## References
-
 [1] [[OpenWrt Wiki] OpenWrt in LXC containers](https://openwrt.org/docs/guide-user/virtualization/lxc)
 
 [2] [Installing OpenWRT In Proxmox LXC – Virtualize Everything](https://virtualizeeverything.com/2022/05/23/setting-openwrt-in-proxmox-lxc/)
+{{% /ref %}}
+

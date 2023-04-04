@@ -8,9 +8,37 @@ body {
   text-justify: inter-ideograph;
 }
 
+
+
 a {
   color: #258852;
   text-decoration: none;
+}
+
+a::before {
+  content: "[";
+  font-size: 1em;
+}
+
+a::after {
+  content: "]";
+  font-size: 1em;
+}
+
+.no-tag::after {
+  content: none;
+}
+
+.no-tag::before {
+  content: none;
+}
+
+.ref a::after {
+  content: none;
+}
+
+.ref a::before {
+  content: none;
 }
 
 img {
@@ -62,7 +90,6 @@ hr {
 .chroma {
   overflow-x: scroll;
   border-radius: 10px;
-  font-family: ui-monospace, Menlo, Consolas, monospace;
 }
 
 blockquote {
@@ -110,7 +137,22 @@ aside>p {
   }
 }
 
-mark {
-  background-color: #cfb8;
+em {
+  font-style: normal;
+  background-color: #fefad1;
   color: #000;
+  border-bottom: 1px solid #f6de1a;
+}
+
+strong {
+  font-weight: bold;
+  color: #333;
+}
+
+code {
+  font-family: "Monaco", "Consolas", monospace;
+  font-size: 80%;
+  background-color: #eee9;
+  color: #333;
+  border-radius: 0.2em;
 }
