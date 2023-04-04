@@ -60,7 +60,9 @@ TLS 的基础同样是现代密码学，对密码学大致需要了解的内容�
 
 而 TLS 正是利用密码学中的相关知识，来达到这四个目标，其具体如何做到会在之后的介绍中提到。
 
-
-## References
+{{% inspire %}}
+## Inspired By
 https://github.com/nakov/Practical-Cryptography-for-Developers-Book
 https://en.wikipedia.org/wiki/Transport_Layer_Security
+
+{{% /inspire %}}

@@ -172,10 +172,10 @@ ssh -L 8080:192.168.200.1:80 root@cloud_pve_ip_address
 
 自此，Cloud PVE 方案已经基本完成，通过创建不同 LXC 容器对不同服务进行隔离，对服务器资源进行更细粒度的划分。同时服务本身在云上，可以更便捷的通过云服务商的内网访问资源。但是对于**外界应该如何访问部署在内部 LXC 容器的服务 (内网穿透问题)**，本文仍然没有解决，我会在之后的博文给出我的解决方案。
 
-{{% ref %}}
-## References
+{{% inspire %}}
+## Inspired by
 [1] [[OpenWrt Wiki] OpenWrt in LXC containers](https://openwrt.org/docs/guide-user/virtualization/lxc)
 
 [2] [Installing OpenWRT In Proxmox LXC – Virtualize Everything](https://virtualizeeverything.com/2022/05/23/setting-openwrt-in-proxmox-lxc/)
-{{% /ref %}}
+{{% /inspire %}}
 

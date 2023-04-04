@@ -9,7 +9,7 @@ date: 2022-08-19T13:28:27+08:00
 
 > **eBPF** does to Linux what JavaScript does to HTML.(Sort of.) … In reality, eBPF is more like the v8 virtual machine that runs JavaScript, rather than JavaScript itself. eBPF is part of the Linux kernel.
 
-实际上我看了很多对于 ebpf 的“[正式](https://ebpf.io/what-is-ebpf#what-is-ebpf)”释义依旧云里雾里，大师的解释让我对于 ebpf 一下子不再心怀畏惧：认为其需要高深的 Linux 内核知识，需要充分的内核知识储备。
+实际上我看了很多对于 ebpf 的 *[正式](https://ebpf.io/what-is-ebpf#what-is-ebpf)* 释义依旧云里雾里，大师的解释让我对于 ebpf 一下子不再心怀畏惧：认为其需要高深的 Linux 内核知识，需要充分的内核知识储备。
 
 之后我就开始了我的 ebpf 体验之旅，发现确实以我对于 Linux 内核粗浅的认识，一样可以使用 ebpf (当然也得益于 [bcc](https://github.com/iovisor/bcc) 这一好用的工具)，因此记录下我在了解和学习 ebpf / bcc 过程中踩的一些坑。
 
@@ -108,10 +108,11 @@ b'             zsh-27651   [024] d..31 184377.212267: bpf_trace_printk: Hello, W
 
 ### 待续…
 
-## Reference
-
+## Inspired by
+{{% inspire %}}
 [eBPF Documentation: What is eBPF?](https://ebpf.io/what-is-ebpf)
 
 [Learn eBPF Tracing: Tutorial and Examples](https://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
 
 [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
+{{% /inspire %}}
