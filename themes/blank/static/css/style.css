@@ -104,7 +104,7 @@ blockquote {
   position: relative;
 }
 
-aside {
+.btw {
   width: 25%;
   right: 100%;
   text-align: justify;
@@ -113,14 +113,14 @@ aside {
   color: #888;
 }
 
-aside>p {
+.btw>p {
   padding-top: 1px;
   margin-top: 0px;
   font-size: 80%;
 }
 
 @media screen and (max-width: 80ch) {
-  aside {
+  .btw {
     font-size: 80%;
     position: relative;
     margin: 0.5em 0 0.5em auto;
@@ -131,7 +131,7 @@ aside>p {
     max-width: 75%;
   }
 
-  aside>p {
+  .btw>p {
     border-top: 1px solid;
     border-bottom: 1px solid;
   }
