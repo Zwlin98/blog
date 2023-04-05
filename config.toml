@@ -12,16 +12,16 @@ disableKinds = ['taxonomy', 'term','section']
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "Home"
+  name = "Posts"
   weight = 10
-  identifier = "home"
+  identifier = "posts"
   url = "/"
 
-[[menu.main]]
-  name = "Books"
-  weight = 20
-  identifier = "books"
-  url = "/books/"
+#[[menu.main]]
+#  name = "Memos"
+#  weight = 20
+#  identifier = "books"
+#  url = "https://memos.zwlin.io/"
 
 [[menu.main]]
   name = "About"
