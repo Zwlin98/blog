@@ -36,6 +36,9 @@ For a simultaneous close, in terms of Figure, both ends go from ESTABLISHED to F
 
 TCP 同时关闭的时候，两端都会进入 TIME_WAIT，并且要等待 2MSL。
 
+{{% inspire %}}
 ## Reference
 
-[TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
++ [TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
+
+{{% /inspire %}}

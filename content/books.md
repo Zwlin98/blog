@@ -7,18 +7,19 @@ draft: true
 这里记录了我读过的技术书籍，我喜欢阅读各种技术书籍，基本上会去看英文原版书籍，一是因为技术类的图书更新的非常快，来不及等翻译，二是阅读英文书籍可以提高英文水平，三是现在很多中文翻译的质量不敢苟同，甚至会加大阅读难度，我也建议所有有能力的同学去尽量去读原版图书。
 
 ### 在读书单
-
-+ Designing Data-Intensive Applications：The Big Ideas Behind Reliable，Scalable，and Maintainable Systems (DDIA)
-
 + Linux Observability with BPF
 
 ### 计划书单
++ System Programming with Rust
 
++ Programming Language
+
+### 已读书单
 + Advanced Programming in the UNIX Environment (APUE)
 
 + Unix Network Programming Volume 1：The Sockets Networking API：International Edition (UNP)
 
-### 已读书单
++ Designing Data-Intensive Applications：The Big Ideas Behind Reliable，Scalable，and Maintainable Systems (DDIA)
 
 * Structure and Interpretation of Computer Programs (SICP)
 

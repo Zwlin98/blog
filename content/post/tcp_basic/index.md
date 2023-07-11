@@ -62,7 +62,9 @@ TCP 同时打开，需要交换 4 个 Segment，而不是正常握手的 3 个�
 ![TCP Simultaneous Close](image-20220527192040428.png)
 
 TCP 的同时关闭和正常的关闭区别不大。只不过，在这种情况下，两端都是 `active closer`。
-
+{{% inspire %}}
 ## Reference
 
-[TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
++ [TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
+
+{{% /inspire %}}

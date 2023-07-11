@@ -48,11 +48,11 @@ For a reset segment to be accepted by a TCP,**the *ACK* bit field must be set an
 ## 其他
 
 网上资料提到很多会触发 RST 的具体情景，我觉得大部分可以概括进 1，2 两种情况，关于这部分，放在参考资料里。
-
+{{% inspire %}}
 ## Reference
 
-[TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
++ [TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
++ [tcp rst 产生的几种情况](https://zhuanlan.zhihu.com/p/30791159)
++ [浅谈 tcp 的半打开连接](https://zhuanlan.zhihu.com/p/32081783)
 
-[tcp rst 产生的几种情况](https://zhuanlan.zhihu.com/p/30791159)
-
-[浅谈 tcp 的半打开连接](https://zhuanlan.zhihu.com/p/32081783)
+{{% /inspire %}}

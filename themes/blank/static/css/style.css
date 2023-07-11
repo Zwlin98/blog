@@ -9,7 +9,6 @@ body {
 }
 
 
-
 a {
   color: #258852;
   text-decoration: none;
@@ -39,6 +38,22 @@ a::after {
 
 .inspire a::before {
   content: none;
+}
+
+.inspire ul {
+  list-style: none;
+  counter-reset: inspire-counter;
+  padding: 0;
+}
+
+.inspire li {
+  padding-left: 0;
+  margin-bottom: 0.2em;
+}
+
+.inspire li:before {
+  content: "[" counter(inspire-counter) "]   ";
+  counter-increment: inspire-counter;
 }
 
 img {

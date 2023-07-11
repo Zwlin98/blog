@@ -23,13 +23,12 @@ date: 2021-03-30T19:46:39+08:00
 
 1. 是不能与之前连接的序列号重叠。
 2. 要有足够强的随机性，防止恶意的 TCP Segment 伪造 (可以伪造 RST，中断正常的 TCP 连接)。
-
+{{% inspire %}}
 ## Reference
 
-[TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
++ [TCP/IP Illustrated, Volume 1 The Protocol - Kevin R. Fall](https://www.oreilly.com/library/view/tcpip-illustrated-volume/9780132808200/)
++ [RFC0793](https://datatracker.ietf.org/doc/html/rfc793)
++ [理解 TCP 报文头中的初始序列号](https://jaminzhang.github.io/network/understanding-tcp-isn/)
++ [TCP/IP 协议中，在建立连接的时候 ISN 序号分配问题？](https://www.zhihu.com/question/49794331)
 
-[RFC0793](https://datatracker.ietf.org/doc/html/rfc793)
-
-[理解 TCP 报文头中的初始序列号](https://jaminzhang.github.io/network/understanding-tcp-isn/)
-
-[TCP/IP 协议中，在建立连接的时候 ISN 序号分配问题？](https://www.zhihu.com/question/49794331)
+{{% /inspire %}}

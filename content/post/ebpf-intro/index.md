@@ -108,11 +108,9 @@ b'             zsh-27651   [024] d..31 184377.212267: bpf_trace_printk: Hello, W
 
 ### 待续…
 
-## Inspired by
 {{% inspire %}}
-[eBPF Documentation: What is eBPF?](https://ebpf.io/what-is-ebpf)
-
-[Learn eBPF Tracing: Tutorial and Examples](https://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
-
-[bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
+## Inspired by
++ [eBPF Documentation: What is eBPF?](https://ebpf.io/what-is-ebpf)
++ [Learn eBPF Tracing: Tutorial and Examples](https://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
++ [bcc Reference Guide](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
 {{% /inspire %}}
