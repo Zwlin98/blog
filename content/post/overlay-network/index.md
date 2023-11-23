@@ -51,7 +51,7 @@ Tailscale 在全球范围内运行 DERP 中继服务器，作为在 NAT 穿透�
 
 除了使用 Tailscale 官方 DERP 服务器之外，我们可以[运行自己的 DERP 服务器](https://tailscale.com/kb/1118/custom-derp-servers/)。从而降低延迟（特别是在中国大陆），提高稳定性。
 
-事实上，Headscale 提供了一个内嵌的 DERP Server，配置起来也非常简单，但是当你的 Headscale 机器带宽有限，也可以在其他机器上建立自己的 DERP Server，我也提供了一个我自己正在使用的更为简单的配置 DERP 的方案，简化了 DERP 服务的搭建，有兴趣的可以看看。
+事实上，Headscale 提供了一个内嵌的 DERP Server，配置起来也非常简单，但是当你的 Headscale 机器带宽有限，也可以在其他机器上建立自己的 DERP Server，我也提供了一个我自己正在使用的更为简单的配置 DERP 的[方案](https://github.com/Zwlin98/derp)，简化了 DERP 服务的搭建，有兴趣的可以看看。
 
 ## Tricks
 
@@ -68,5 +68,6 @@ Tailscale 在全球范围内运行 DERP 中继服务器，作为在 NAT 穿透�
 + [[译] NAT 穿透是如何工作的：技术原理及企业级实践（Tailscale, 2020）](https://arthurchiao.art/blog/how-nat-traversal-works-zh/)
 + [juanfont/headscale: An open source, self-hosted implementation of the Tailscale control server](https://github.com/juanfont/headscale)
 + [DERP Servers](https://tailscale.com/kb/1232/derp-servers/)
++ [zwlin98/derp](https://github.com/Zwlin98/derp)
 
 {{% /inspire %}}
