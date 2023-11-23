@@ -32,4 +32,4 @@ jobs:
         run: |
           npm install -g wrangler
           wrangler --version
-          wrangler pages publish public --project-name=blog --branch=main
+          wrangler pages deploy public --project-name=blog --branch=main
