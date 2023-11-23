@@ -8,6 +8,19 @@ body {
   text-justify: inter-ideograph;
 }
 
+.lastmod {
+  color: #258852;
+}
+
+.initpost {
+  color: #258852;
+}
+
+.date {
+  margin-top: -0.5em;
+  color: #888;
+}
+
 
 a {
   color: #258852;

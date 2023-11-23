@@ -1,9 +1,11 @@
 {{define "main"}}
 <div>
   <h1><span class="title">{{ .Title | markdownify }}</span></h1>
-  {{ if (gt .Params.date 0) }}
-  <h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>
-  {{ end }}
+  <h4 class="date">
+    <span class="initpost">Published at:</span> {{ .Date | time.Format "2006/01/02" }}
+    &nbsp;&nbsp;&nbsp;
+    <span class="lastmod">Last updated:</span> {{ .Lastmod | time.Format "2006/01/02" }}
+  </h4>
 </div>
 
 <main>{{ .Content }}</main>
