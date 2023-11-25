@@ -8,6 +8,10 @@ body {
   text-justify: inter-ideograph;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  text-align: left;
+}
+
 .lastmod {
   color: #258852;
 }
