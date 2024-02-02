@@ -1,5 +1,5 @@
 body {
-  font-family: 'Optima', 'Times New Roman', 'STSong', 'Noto Serif SC', 'Microsoft YaHei', serif;
+  font-family: 'Optima', 'Times New Roman', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
 }
 
 .highlight {
@@ -14,3 +14,4 @@ body {
 nav {
   font-size: 1.1em;
 }
+
