@@ -2,9 +2,9 @@
 <div>
   <h1><span class="title">{{ .Title | markdownify }}</span></h1>
   <h4 class="date">
-    <span class="initpost">Published at:</span> {{ .Date | time.Format "2006/01/02" }}
-    &nbsp;&nbsp;&nbsp;
     <span class="lastmod">Last updated:</span> {{ .Lastmod | time.Format "2006/01/02" }}
+    &nbsp;&nbsp;&nbsp;
+    <span class="initpost">Published at:</span> {{ .Date | time.Format "2006/01/02" }}
   </h4>
 </div>
 
