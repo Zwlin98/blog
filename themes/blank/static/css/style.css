@@ -76,6 +76,11 @@ a::after {
   counter-increment: inspire-counter;
 }
 
+ol {
+    margin-left: 1em;
+    padding-left: 0;
+}
+
 img {
   max-width: 100%;
 }
