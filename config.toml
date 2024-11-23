@@ -2,6 +2,8 @@ baseURL = "https://blog.zwlin.io"
 title = "Zwlin's Blog"
 theme = "blank"
 
+ignoreLogs = ['warning-goldmark-raw-html']
+
 disableKinds = ['taxonomy', 'term','section']
 [author]                  # essential                     # 必需
   name = "Zwlin"
