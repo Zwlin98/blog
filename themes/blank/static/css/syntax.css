@@ -351,3 +351,81 @@
 
 /* TextWhitespace */
 .chroma .w {}
+
+/* Dark mode syntax highlighting — system fallback (no-JS) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .bg { background-color: #282c34; }
+  :root:not([data-theme]) .chroma { background-color: #282c34; }
+  :root:not([data-theme]) .chroma .hl { background-color: #2c313a; }
+  :root:not([data-theme]) .chroma .lnt { color: #5c6370; }
+  :root:not([data-theme]) .chroma .ln { color: #5c6370; }
+  :root:not([data-theme]) .chroma .k { color: #569cd6; }
+  :root:not([data-theme]) .chroma .kc { color: #569cd6; }
+  :root:not([data-theme]) .chroma .kd { color: #569cd6; }
+  :root:not([data-theme]) .chroma .kn { color: #569cd6; }
+  :root:not([data-theme]) .chroma .kp { color: #569cd6; }
+  :root:not([data-theme]) .chroma .kr { color: #569cd6; }
+  :root:not([data-theme]) .chroma .kt { color: #569cd6; }
+  :root:not([data-theme]) .chroma .nc { color: #4ec9b0; }
+  :root:not([data-theme]) .chroma .nd { color: #c586c0; }
+  :root:not([data-theme]) .chroma .nf { color: #dcdcaa; }
+  :root:not([data-theme]) .chroma .s { color: #6a9955; }
+  :root:not([data-theme]) .chroma .sa { color: #6a9955; }
+  :root:not([data-theme]) .chroma .sb { color: #6a9955; }
+  :root:not([data-theme]) .chroma .sc { color: #6a9955; }
+  :root:not([data-theme]) .chroma .dl { color: #6a9955; }
+  :root:not([data-theme]) .chroma .sd { color: #6a9955; }
+  :root:not([data-theme]) .chroma .s2 { color: #6a9955; }
+  :root:not([data-theme]) .chroma .se { color: #d7ba7d; }
+  :root:not([data-theme]) .chroma .sh { color: #6a9955; }
+  :root:not([data-theme]) .chroma .si { color: #6a9955; }
+  :root:not([data-theme]) .chroma .sx { color: #6a9955; }
+  :root:not([data-theme]) .chroma .sr { color: #d16969; }
+  :root:not([data-theme]) .chroma .s1 { color: #6a9955; }
+  :root:not([data-theme]) .chroma .ss { color: #6a9955; }
+  :root:not([data-theme]) .chroma .c { color: #6a737d; font-style: italic; }
+  :root:not([data-theme]) .chroma .ch { color: #6a737d; font-style: italic; }
+  :root:not([data-theme]) .chroma .cm { color: #6a737d; font-style: italic; }
+  :root:not([data-theme]) .chroma .c1 { color: #6a737d; font-style: italic; }
+  :root:not([data-theme]) .chroma .cs { color: #6a737d; font-style: italic; }
+  :root:not([data-theme]) .chroma .cp { color: #6a737d; font-style: italic; }
+  :root:not([data-theme]) .chroma .cpf { color: #6a737d; font-style: italic; }
+}
+
+/* Dark mode syntax highlighting — JS toggle */
+[data-theme="dark"] .bg { background-color: #282c34; }
+[data-theme="dark"] .chroma { background-color: #282c34; }
+[data-theme="dark"] .chroma .hl { background-color: #2c313a; }
+[data-theme="dark"] .chroma .lnt { color: #5c6370; }
+[data-theme="dark"] .chroma .ln { color: #5c6370; }
+[data-theme="dark"] .chroma .k { color: #569cd6; }
+[data-theme="dark"] .chroma .kc { color: #569cd6; }
+[data-theme="dark"] .chroma .kd { color: #569cd6; }
+[data-theme="dark"] .chroma .kn { color: #569cd6; }
+[data-theme="dark"] .chroma .kp { color: #569cd6; }
+[data-theme="dark"] .chroma .kr { color: #569cd6; }
+[data-theme="dark"] .chroma .kt { color: #569cd6; }
+[data-theme="dark"] .chroma .nc { color: #4ec9b0; }
+[data-theme="dark"] .chroma .nd { color: #c586c0; }
+[data-theme="dark"] .chroma .nf { color: #dcdcaa; }
+[data-theme="dark"] .chroma .s { color: #6a9955; }
+[data-theme="dark"] .chroma .sa { color: #6a9955; }
+[data-theme="dark"] .chroma .sb { color: #6a9955; }
+[data-theme="dark"] .chroma .sc { color: #6a9955; }
+[data-theme="dark"] .chroma .dl { color: #6a9955; }
+[data-theme="dark"] .chroma .sd { color: #6a9955; }
+[data-theme="dark"] .chroma .s2 { color: #6a9955; }
+[data-theme="dark"] .chroma .se { color: #d7ba7d; }
+[data-theme="dark"] .chroma .sh { color: #6a9955; }
+[data-theme="dark"] .chroma .si { color: #6a9955; }
+[data-theme="dark"] .chroma .sx { color: #6a9955; }
+[data-theme="dark"] .chroma .sr { color: #d16969; }
+[data-theme="dark"] .chroma .s1 { color: #6a9955; }
+[data-theme="dark"] .chroma .ss { color: #6a9955; }
+[data-theme="dark"] .chroma .c { color: #6a737d; font-style: italic; }
+[data-theme="dark"] .chroma .ch { color: #6a737d; font-style: italic; }
+[data-theme="dark"] .chroma .cm { color: #6a737d; font-style: italic; }
+[data-theme="dark"] .chroma .c1 { color: #6a737d; font-style: italic; }
+[data-theme="dark"] .chroma .cs { color: #6a737d; font-style: italic; }
+[data-theme="dark"] .chroma .cp { color: #6a737d; font-style: italic; }
+[data-theme="dark"] .chroma .cpf { color: #6a737d; font-style: italic; }

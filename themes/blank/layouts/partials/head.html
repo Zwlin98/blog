@@ -2,9 +2,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:title" content="{{.Title}}" />
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 150 }}{{ end }}" />
+    <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+    function updateToggleLabel() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+    }
+    document.addEventListener('DOMContentLoaded', updateToggleLabel);
+    function toggleTheme() {
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateToggleLabel();
+      var f = document.querySelector('.giscus-frame');
+      if (f) {
+        f.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: next === 'dark' ? 'dark' : 'light_high_contrast' } } },
+          'https://giscus.app'
+        );
+      }
+    }
+    </script>
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" /> 
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" /> 
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/syntax.css" | relURL }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | relURL }}" />

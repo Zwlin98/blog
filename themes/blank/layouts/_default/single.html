@@ -10,10 +10,26 @@
 
 <main>{{ .Content }}</main>
 
-<div class="discussion">
-  <script src="https://giscus.app/client.js" data-repo="Zwlin98/blog" data-repo-id="R_kgDOHXDxFA"
-    data-category="Announcements" data-category-id="DIC_kwDOHXDxFM4CPY5Q" data-mapping="og:title"
-    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contrast"
-    data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script>
-</div>
+<div class="discussion" id="giscus-container"></div>
+<script>
+(function() {
+  var theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light_high_contrast';
+  var s = document.createElement('script');
+  s.src = 'https://giscus.app/client.js';
+  s.setAttribute('data-repo', 'Zwlin98/blog');
+  s.setAttribute('data-repo-id', 'R_kgDOHXDxFA');
+  s.setAttribute('data-category', 'Announcements');
+  s.setAttribute('data-category-id', 'DIC_kwDOHXDxFM4CPY5Q');
+  s.setAttribute('data-mapping', 'og:title');
+  s.setAttribute('data-reactions-enabled', '1');
+  s.setAttribute('data-emit-metadata', '0');
+  s.setAttribute('data-input-position', 'top');
+  s.setAttribute('data-theme', theme);
+  s.setAttribute('data-lang', 'zh-CN');
+  s.setAttribute('data-loading', 'lazy');
+  s.crossOrigin = 'anonymous';
+  s.async = true;
+  document.getElementById('giscus-container').appendChild(s);
+})();
+</script>
 {{end}}
